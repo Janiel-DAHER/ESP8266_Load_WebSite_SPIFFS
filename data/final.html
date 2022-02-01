@@ -1,0 +1,95 @@
+ 
+<!DOCTYPE HTML><html>
+<head>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="final5.js"></script>
+  <script type="text/javascript" src="bouton.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+    <body>
+        <img src="iut.png"/>
+            <div>
+            <p class="name">Janiel Daher<p>
+            <div class="logoposition2"></div>
+            <br></br>
+            <br></br>
+            <p class="gps">Données GPS & Capteurs</p>
+            <img class="terre" alt="terre" src="https://m.gifmania.be/Gif-Animes-Espace/Animations-Astronomie/Images-Gif-La-Planete-Terre/La-Planete-Terre-84970.gif" />
+            <img class="satelite" alt="sat" src="https://pipdigz.co.uk/other/bvga/satellite.gif" />
+            <br></br>
+
+          <p class="position">Position :</p>
+           
+                    <span class="latitude-position">Latitude N: </span>
+                    <span class="latitude-position" id="lirealt">--</span>
+                    <sup class="units"></sup>
+                    <br></br>
+                    <span class="longitude-position">Longitude E:</span>
+                    <span class="longitude-position" id="lirelng">--</span>
+                    <sup class="units"></sup>
+                    <br></br>
+                    <span class="altitude-position">Altitude :</span>
+                    <span class="altitude-position" id="lireele">--</span>
+                    <sup class="units"></sup>
+                
+                </ul>
+            <p class="infosat">Informations Satellites :</p>
+            <ul>
+                
+                    <span class="nbsat">Nombre de Satelites :</span>
+                    <span span class="nbsat" id="lirenbsat">--</span>
+                    <sup class="units"></sup>
+                    <br></br>
+                    <span class="heure">Heure (UTC) :</span>
+                    <span span class="heure" id="liretime">--</span>
+                    <sup class="units"></sup>
+                    <br></br>
+                    <span class="minute">Minute :</span>
+                    <span span class="minute" id="lireminute">--</span>
+                    <sup class="units"></sup>
+                    <br></br>
+                    <span class="seconde">Seconde :</span>
+                    <span span class="seconde" id="lireseconde">--</span>
+                    <sup class="units"></sup>
+                 
+                 
+                </ul>
+               <p class="autreinfo">Autres Informations :</p>
+                    <ul>
+                            <span class="route">Route :</span>
+                            <span span class="route" id="lireroute">--</span>
+                            <sup class="units"></sup>
+                            <br></br>
+                            <span class="vitesse">Vitesse :</span>
+                            <span span class="vitesse" id="lirevitesse">--</span>
+                            <br></br>
+                            <sup class="units"></sup>
+                    </ul>
+                    <p class="capteurs">Capteurs Embarqués:</p>
+                        <ul>
+                            
+                                <span class="temperature">Temperature : </span>
+                                <span span class="temperature" id="liretemperature">--</span>
+                                <sup class="units"></sup>
+                                <br></br>
+                                <span class="humidity">Humidité : </span>
+                                <span span class="humidity" id="lirehumidity">--</span>
+                                <sup class="units"></sup>
+                                <br></br>
+                                <span class="gas">Capteur Gas (ppm) : </span> 
+                                <span span class="gas" id="liregas">--</span>
+                                <sup class="units"></sup>
+                                
+            
+                        </ul>
+                        <p class="pilotage">Contrôler carte:</p>
+                        <ul>
+                                <p class="state">Etat sortie GPIO2<strong> %STATE%</strong></p>
+                                <a href="/on"><button class="button">ON</button></a>
+                                <a href="/off"><button class="button button2">OFF</button></a>
+                                </ul>
+
+                </p>
+</body>
+
+</html>

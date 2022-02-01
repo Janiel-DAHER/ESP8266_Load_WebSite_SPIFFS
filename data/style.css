@@ -1,0 +1,223 @@
+div
+{
+    min-height: 100%;
+    min-width: 6000px;
+    width: auto;
+    height: 3000px;
+    background-image: radial-gradient(circle at top left, #F5F700, #42EC07);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logoposition2
+{
+    top:40px;
+    left:30px;
+    width: 300px;
+    height: 500px;
+    background-image: url('iut.png');
+    background-repeat: no-repeat;
+}
+.gps /*Gps&Capteurs_Titre*/
+ {
+    position: relative;
+    top: -20px; left: 170px;
+    font-size: 200%;
+    color: #0036FF; 
+    text-decoration: Blue wavy underline;
+    font-weight: 350;
+
+}
+.position /*Titre_Position*/
+{
+    position: relative;
+    top: 0px; left: 20px;
+    font-size: 200%;
+    color: #0036FF; 
+}
+.name /*Titre_Janiel_Daher*/
+{
+    position: relative;
+    top: 50px; left: 450px;
+    font-size: 160%;
+    color: #0036FF; 
+}
+.position
+{
+    position: relative;
+    top: 0px; left: 400px;
+    font-size: 150%;
+    color: #0036FF; 
+    text-decoration: underline;
+}
+.latitude-position
+{
+    position: relative;
+    top: -10px; left: 375px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.longitude-position
+{
+    position: relative;
+    top: -20px; left: 375px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.altitude-position
+{
+    position: relative;
+    top: -30px; left: 375px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.infosat
+{
+    position: relative;
+    top: -190px; left: 10px;
+    font-size: 150%;
+    color: #0036FF; 
+    text-decoration: underline;
+}
+.nbsat
+{
+    position: relative;
+    top: -186px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.heure
+{
+    position: relative;
+    top: -200px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.minute
+{
+    position: relative;
+    top: -214px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.seconde
+{
+    position: relative;
+    top: -228px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.info 
+{
+    position: relative;
+    top: 0px; left: 20px;
+    font-size: 200%;
+    color: #0036FF; 
+}
+.autreinfo
+{
+    position: relative;
+    top: -220px; left: 400px;
+    font-size: 150%;
+    color: #0036FF; 
+    text-decoration: underline;
+}
+.route
+{
+    position: relative;
+    top: -218px; left: 375px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.vitesse
+{
+    position: relative;
+    top: -228px; left: 375px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.capteurs
+{
+    position: relative;
+    top: -380px; left: 10px;
+    font-size: 150%;
+    color: #0036FF; 
+    text-decoration: underline;
+}
+.temperature
+{
+    position: relative;
+    top: -380px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.humidity
+{
+    position: relative;
+    top: -386px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+.gas
+{
+    position: relative;
+    top: -392px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+
+    
+.terre
+{
+    top:40px;
+    left:1500px;
+    width: 320px;
+    height: 300px;
+    background-repeat: no-repeat;
+}
+.satelite
+{
+      position: relative;
+    top: -40px; left: -50px;
+    width: 250px;
+    height: 300px;
+    background-repeat: no-repeat;
+    transform: rotate(100deg); 
+}
+
+.pilotage
+{
+     position: relative;
+    top: -375px; left: 10px;
+    font-size: 150%;
+    color: #0036FF; 
+    text-decoration: underline;
+}
+
+.state
+{
+     position: relative;
+    top: -300px; left: 0px;
+    font-size: 120%;
+    color: #0036FF; 
+}
+
+.button {
+    position: relative;
+    top: -400px; left: 10px;
+  display: inline-block;
+  background-color: #008CBA;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 2px;
+  cursor: pointer;
+}
+.button2 {
+  background-color: #f44336;
+  
+}
