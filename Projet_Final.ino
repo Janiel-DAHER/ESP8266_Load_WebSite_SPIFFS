@@ -14,29 +14,20 @@ float vvt;
 
 
 
-
-
-
 DHTesp dht; 
-
 MQ7 mq7(A0,3.3);
 
-
-
-// Replace with your network credentials
 const char* ssid = 
 const char* password = 
+  
 static const int RXPin = 3, TXPin = 1; 
 static const uint32_t GPSBaud = 9600;  
 TinyGPSPlus gps;                                    
 SoftwareSerial ss(RXPin, TXPin); 
-                       
-// Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
 
 int ledpin = 2;
 String ledState;
-
 
 
 //******************************************************
@@ -81,17 +72,20 @@ String processor(const String& var){
     return ledState;
   }
 }
-void setup(){
 
+void setup(){
+  
   Serial.begin(9600);
   pinMode(ledpin,OUTPUT);
   pinMode(4,OUTPUT);
   digitalWrite(4,HIGH); 
   delay(500); 
   digitalWrite(4,LOW); 
+  
   //***********************************************************************
   //                     SPIFFS, Wifi & Server CONFIGURATION
   //***********************************************************************
+  
   Serial.println ( "" ); 
   Serial.print ( "Démarrage de l'ESP8266" );
   delay(1000);
@@ -101,9 +95,11 @@ void setup(){
   Serial.print ( "Le chargement SPIFFS est terminé" );
   Serial.println ( "" ); 
   Serial.println ( "" ); 
+  
   Serial.print ( "Décompte avant la configuration de l'interface Wifi : " );
   Serial.print( "3" );delay(1000);Serial.print( ",2" );delay(1000);Serial.print( ",1" );delay(1000);  
   WiFi.mode(WIFI_STA);
+  
   Serial.println ( "" );
   Serial.println ( "" ); 
   WiFi.begin(ssid,password);while (WiFi.status() != WL_CONNECTED) 
@@ -111,18 +107,22 @@ void setup(){
   Serial.println ( "" ); 
   Serial.println ( "" ); delay(1000);
   Serial.print( "connecte au reseau " );
+  
   digitalWrite(4,HIGH);delay(250);digitalWrite(4,LOW);delay(250);
   digitalWrite(4,HIGH);delay(250);digitalWrite(4,LOW);delay(250);
   digitalWrite(4,HIGH);delay(250);digitalWrite(4,LOW);delay(250);
+  
   Serial.println ( "" ); 
   Serial.print ( "Démarrage du serveur dans 3 " );delay(1000); Serial.print ( ",2 " );delay(1000); Serial.print ( ",1" );delay(1000);  
   Serial.println ( "" ); 
   server.begin(); 
   Serial.println ("Serveur Operationnel");
   delay(500);
+  
   digitalWrite(4,HIGH);delay(250);digitalWrite(4,LOW);delay(250);
   digitalWrite(4,HIGH);delay(250);digitalWrite(4,LOW);delay(250);
   digitalWrite(4,HIGH);delay(250);digitalWrite(4,LOW);delay(250);
+  
   ss.begin(GPSBaud);  
   String thisBoard= ARDUINO_BOARD;
   dht.setup(5, DHTesp::DHT11);  
@@ -148,9 +148,11 @@ void setup(){
   // Images_Files-----------------------------------------------------------
   server.on("/iut.png", HTTP_GET, [](AsyncWebServerRequest *request){
   request->send(SPIFFS, "/iut.png", "image/png");});
+  
   // **********************************************************************
   //                          SERVICE PAGE SENSORS
   // **********************************************************************
+  
   server.on("/liregas", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readgas().c_str());
   });
@@ -186,7 +188,9 @@ void setup(){
   });
      server.on("/lirevitesse", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readvitesse().c_str());
-  });//******************************************************************************************7
+  });
+  
+  //******************************************************************************************7
     server.on("/on", HTTP_GET, [](AsyncWebServerRequest *request){
     digitalWrite(ledpin, HIGH);    
     request->send(SPIFFS, "/final.html", String(), false, processor);
@@ -215,7 +219,7 @@ void loop(){
   vt = vvt;
 }
 
-static void smartDelay(unsigned long ms)                // Version custum de delay() qui permet d'assurer que l'objet "gps" a bien reçu des données (les plus récentes).
+static void smartDelay(unsigned long ms)
 {
   unsigned long start = millis();
   do 
